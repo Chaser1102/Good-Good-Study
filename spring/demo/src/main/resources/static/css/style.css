@@ -1,0 +1,110 @@
+
+.signin{
+    background-image: url("../background.png");
+    padding: 250px 0;
+}
+.sign-content {
+    max-width: 620px;
+    margin: 0 auto;
+}
+.sign-content h2{
+    font-family: Poppins;
+    text-transform: capitalize;
+    color: #464d5f;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 54px;
+}
+.form-control {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #bcbfc9;
+    border-radius: 0;
+    outline: none;
+    box-shadow: none;
+    padding: 0px 0;
+    height: 46px;
+
+}
+.form-control:focus{
+    box-shadow:none;
+}
+.signin-form label{
+    position: relative;
+    top: 5px;
+    color: #474d5b;
+    font-size:14px;
+    font-weight: 500;
+    text-transform: capitalize;
+    margin-bottom: 0px;
+}
+.cicrle{
+    margin: 0 auto;
+}
+.password-circle{
+    margin-top:15px;
+}
+.password-circle input[type="radio"] + label{
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: capitalize;
+    margin-bottom: 17px;
+    margin-right:5px;
+}
+.signin-password{
+    display: inline-block;
+}
+.forgot-password{
+    display: inline-block;
+    margin-left:300px;
+}
+.forgot-password>a{
+    color:#0070b8;
+    font-size:14px;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+.btn.signin_btn,.btn.signup_btn {
+    width: 620px;
+    padding: 0;
+    height: 60px;
+    background:#5a84fd;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-radius: 3px;
+    margin-top: 23px;
+}
+.signin-footer p,.signup-footer p{
+    color: #91949c;
+    font-size:16px;
+    max-width: 265px;
+    margin: 35px auto;
+    text-transform: capitalize;
+}
+.signin-footer p>a,.signup-footer p>a{
+    color:#0070b8;
+    font-size:16px;
+    font-weight: 500;
+    text-transform: capitalize;
+
+}
+.signup-form label{
+    position: relative;
+    top: 5px;
+    color: #474d5b;
+    font-size:14px;
+    font-weight: 500;
+    text-transform: capitalize;
+    margin-bottom: 0px;
+}
+.modal-content{
+    max-width: 620px;
+    margin: 0 auto;
+}
+.modal-content  .sign-content {
+    max-width: 500px;
+    margin: 0 auto;
+}
+.btn.signup_btn{
+    width: 500px;
+}

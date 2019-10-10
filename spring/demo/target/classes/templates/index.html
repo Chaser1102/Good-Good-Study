@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>sign In</title>
+		<link rel="stylesheet" href="../static/css/bootstrap.min.css"th:href="@{css/bootstrap.min.css}">
+		<link rel="stylesheet" href="../static/css/style.css"th:href="@{css/style.css}">
+    </head>
+    <body>
+        <section class="signin">
+
+            <div class="container">
+                <div class="sign-content">
+					<h2>Sign in</h2>
+					<div class="row">
+							<div class="col-sm-12">
+								<div class="signin-form">
+									<form id="signin" action="/signin" method="GET">
+										<div class="form-group">
+											<label for="signin-form-email">Email</label>
+											<input type="email" class="form-control" name="email" id="signin-form-email" placeholder="Email">
+										</div><!-- /.form-group -->
+										<div class="form-group">
+												<label for="signin-form-password">Password</label>
+												<input type="password" class="form-control" name="password" id="signin-form-password" placeholder="Enter your password">
+										</div><!-- /.form-group -->
+									</form><!-- form -->
+								</div><!-- /.signin-form -->
+							</div><!--/.col -->
+						</div><!--/.row -->
+						
+						<div class="row">
+							<div class="col-sm-12">
+								<div class="circle">
+									<div class="signin-password">
+										<div class="password-circle">
+											<input type="radio" id="radio1">
+											<label for="radio1">
+												Remember Password
+											 </label>
+											</div>
+									</div>
+								
+									<div class="forgot-password text-right" >
+										 <a href="index.html">Forgot your password</a>
+									</div>
+								</div>
+							</div>
+						</div><!-- /.row -->
+	
+						<div class="row">
+								<div class="col-sm-12">
+									<div class="signin-footer">
+										<button type="button" class="btn signin_btn " onclick="document.getElementById('signin').submit()">
+										sign in
+										</button>
+										<p>
+											Don’t have an Account ?
+											<a data-toggle="modal" data-target=".signup_modal">register</a>
+										</p>
+									</div><!--/.signin-footer -->
+								</div><!--/.col -->
+							</div><!--/.row -->	
+                </div><!-- /.sign-content -->
+
+                <!-- modal part start -->
+				<div class="modal fade signup_modal" tabindex="-1" role="dialog" >
+					<div class="modal-dialog modal-lg">
+					    <div class="modal-content">
+					      	<div class="sign-content">
+
+					      		<div class="modal-header">
+									<h2>sign up</h2>
+								</div><!--/.modal-header -->
+								
+								<div class="modal-body">
+									<div class="signup-form" >
+										<div class="row">
+											<div class="col-sm-12">
+												<form id="signup" action="/signup" method="GET">
+													<div class="form-group">
+													    <label for="firstname">name</label>
+													    <input type="text" class="form-control" name="name" placeholder="Name">
+													</div><!--/.form-group -->
+													<div class="form-group">
+														<label for="email">email</label>
+													    <input type="email" class="form-control" name="email" placeholder="Enter your email adress">
+													</div><!--/.form-group -->
+													<div class="form-group">
+														<label for="password">password</label>
+													    <input type="password" class="form-control" name="password" placeholder="Enter your password">
+													</div><!--/.form-group -->
+												</form><!--/form -->
+											</div><!--/.col -->
+										</div><!--/.row -->
+
+									</div><!--/.signin-form -->
+
+
+									<div class="signup-footer">
+										<button type="button" class="btn signup_btn " onclick="document.getElementById('signup').submit()">
+										sign up
+										</button>
+										<p>
+											already member ?
+											<a href="index.html">Sign In</a>
+										</p>
+									</div><!--/.signin-footer -->
+								</div><!--/.modal-body -->
+
+							</div><!--/.sign-content -->
+					    </div><!--/.modal-content -->
+					</div><!--/.modal-dialog -->
+				</div><!--/.modal -->
+				<!-- modal part end -->
+            </div><!-- /.container -->
+		</section>
+		<script src="../static/js/jquery.js"th:src="@{js/jquery.js}"></script>
+		<script src="../static/js/bootstrap.min.js"th:src="@{js/bootstrap.min.js}"></script>
+    </body>
+</html>
