@@ -1,0 +1,23 @@
+mvc
+
+model-view-controller
+
+model即数据模型与数据库进行交互 进行crud  
+
+view即视图  （thymeleaf）
+
+controller 接受用户请求  将数据给model
+
+
+spring mvc
+
+controller接受用户请求 并把数据传给业务层
+
+servive 对传进来的数据进行处理
+
+dao只负责与数据库的交互
+
+@RequestParam主要用于将请求参数区域的数据映射到控制层方法的参数上
+
+在Spring中有Repository的概念，repository原意指的是仓库，即数据仓库的意思。Repository居于业务层和数据层之间，将两者隔离开来，在它的内部封装了数据查询和存储的逻辑。
+在之前的项目里用到了CrudRepository
