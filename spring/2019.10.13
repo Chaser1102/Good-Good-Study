@@ -1,0 +1,11 @@
+thymeleaf
+
+
+语法	名称	描述	作用
+${…}	Variable Expressions	变量表达式	取出上下文变量的值
+*{…}	Selection Variable Expressions	选择变量表达式	取出选择的对象的属性值
+#{…}	Message Expressions	消息表达式	使文字消息国际化，I18N
+@{…}	Link URL Expressions	链接表达式	用于表示各种超链接地址
+~{…}	Fragment Expressions	片段表达式	引用一段公共的代码片段
+2.1.1 ${…}
+
