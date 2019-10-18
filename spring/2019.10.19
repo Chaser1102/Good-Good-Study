@@ -1,3 +1,28 @@
 注解@RequestParam接收的参数是来自requestHeader中，即请求头。通常用于GET请求，像POST、DELETE等其它类型的请求也可以使用。
 
 注解@RequestBody接收的参数是来自requestBody中，即请求体。一般用于处理非 Content-Type: application/x-www-form-urlencoded编码格式的数据，比如：application/json、application/xml等类型的数据。通常用于接收POST、DELETE等类型的请求数据，GET类型也可以适用。
+
+
+@GetMapping 用于将HTTP GET请求映射到特定处理程序方法的注释。
+
+具体来说，@GetMapping是一个作为快捷方式的组合注释@RequestMapping(method = RequestMethod.GET)。
+
+@PostMapping 用于将HTTP POST请求映射到特定处理程序方法的注释。
+
+具体来说，@PostMapping是一个作为快捷方式的组合注释@RequestMapping(method = RequestMethod.POST)。
+
+此外还有@PutMapping，@PatchMapping，@DeleteMapping同上
+
+所以一般情况下都是用@RequestMapping（method=RequestMethod.）
+
+
+
+对前后端分离的理解
+
+后端逻辑处理  然后能返回json或者xml就OK
+
+
+然后把json送给前端去处理
+
+
+老mvc是直接返回视图
