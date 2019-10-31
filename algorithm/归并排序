@@ -1,0 +1,36 @@
+public class MergeSort {
+    public static int[] temp= new int[10];
+    public static void sort(int[] num, int left, int right){
+        if(right > left){
+            int mid = (right + left) /2;
+            sort(num, left, mid);
+            sort(num, mid + 1, right);
+            merge(num, left, right);
+        }
+    }
+    public static void merge(int[] num, int left, int right){
+        int mid = (right + left) /2;
+        int i = left;
+        int j = mid+1;
+        int t = 0;
+        while (i <= mid && j <= right){
+            temp[t++] = num[i] < num[j] ? num[i++] : num[j++];
+        }
+        while (i <= mid){
+            temp[t++] = num[i++];
+        }
+        while (j <= right){
+            temp[t++] = num[j++];
+        }
+        System.arraycopy(temp, 0, num, left, t);
+    }
+
+    public static void main(String[] args) {
+        int[] num = {10,3,5,6,8,9,4,6,3,2};
+        sort(num, 0, 9);
+        for (int x:
+             num) {
+            System.out.print(x+" ");
+        }
+    }
+}
