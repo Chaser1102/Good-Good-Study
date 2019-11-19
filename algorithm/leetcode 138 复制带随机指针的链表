@@ -1,0 +1,58 @@
+给定一个链表，每个节点包含一个额外增加的随机指针，该指针可以指向链表中的任何节点或空节点。
+
+要求返回这个链表的深拷贝。 
+
+ 
+
+示例：
+
+
+
+输入：
+{"$id":"1","next":{"$id":"2","next":null,"random":{"$ref":"2"},"val":2},"random":{"$ref":"2"},"val":1}
+
+解释：
+节点 1 的值是 1，它的下一个指针和随机指针都指向节点 2 。
+节点 2 的值是 2，它的下一个指针指向 null，随机指针指向它自己。
+
+
+/*
+// Definition for a Node.
+class Node {
+    public int val;
+    public Node next;
+    public Node random;
+
+    public Node() {}
+
+    public Node(int _val,Node _next,Node _random) {
+        val = _val;
+        next = _next;
+        random = _random;
+    }
+};
+*/
+class Solution {
+    HashMap<Node, Node> visited = new HashMap<>();
+    public Node copyRandomList(Node head) {
+        //basecase
+        if(head == null){
+            return null;
+        }
+        
+        //如果已经存在visited中了 那么直接返回
+        if(visited.containsKey(head)){
+            return visited.get(head);
+        }
+        
+        Node node = new Node(head.val, null, null);
+        
+        visited.put(head, node);
+        
+        //分两路进行递归
+        node.next = copyRandomList(head.next);
+        node.random = copyRandomList(head.random);
+        
+        return node;
+    }
+}
